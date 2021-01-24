@@ -1,0 +1,23 @@
+<h2>Добавить покупателя</h2>
+
+<form [formGroup]="svc.form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Имя</label>
+        <input class="form-control" id="name" type="text" formControlName="name" placeholder="Имя Фамилия">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" id="email" type="text" formControlName="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <label for="mobile">Телефон</label>
+        <input class="form-control" id="mobile" type="text" formControlName="mobile" placeholder="Телефон">
+    </div>
+    <div class="form-group">
+        <label for="location">Город</label>
+        <input class="form-control" id="location" type="text" formControlName="location" placeholder="Город">
+    </div>
+   <div class="form-group">
+       <button class="btn btn-info" [disabled]="svc.form.invalid">Сохранить</button>
+   </div>
+</form>
